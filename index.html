@@ -1,109 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B. Sai Praneeth - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-
-<body>
-    <header>
-        <nav>
-            <h1 class="main-title">BHATTU SAI PRANEETH</h1>
-            <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<body class="bg-gray-900 text-white font-sans">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">BHATTU SAI PRANEETH</h1>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="#education" class="hover:text-primary transition-colors">Education</a></li>
+                    <li><a href="#skills" class="hover:text-primary transition-colors">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
+                    <li><a href="#achievements" class="hover:text-primary transition-colors">Achievements</a></li>
+                    <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="section">
-            <h2>Profile</h2>
-            <p>I'm passionate about thriving in a stimulating and challenging work environment. I'm seeking a role in a company where I can apply my knowledge and experience to contribute to the organization's growth. I look forward to working in a challenging environment where I can learn and succeed.</p>
-            <a href="https://drive.google.com/file/d/1n4yGSma4wAdQ22ydqt1veuhBR7Xiih0R/view" class="btn" target="_blank">Download Resume</a>
-        </section>
-
-        <hr>
-
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <div class="edu-card">
-                <h3>Bachelor in Computer Science</h3>
-                <p>CMR Engineering College | 2021 - 2025</p>
-                <p>Course: CSE (AIML) | CGPA: 7.5</p>
-            </div>
-            <div class="edu-card">
-                <h3>Intermediate</h3>
-                <p>Gitam Junior College | 2019 - 2021</p>
-                <p>Board: TSBIE | Academic Percentage: 77%</p>
-            </div>
-            <div class="edu-card">
-                <h3>Secondary School</h3>
-                <p>Atomic Energy Central School-2 | 2007 - 2019</p>
-                <p>Board: CBSE | CGPA: 7.3</p>
+    <main class="container mx-auto px-4 pt-24">
+        <section id="home" class="min-h-screen flex items-center justify-center">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
+                <p class="mb-8 max-w-2xl mx-auto">
+                    I'm passionate about thriving in a stimulating and challenging work environment. I'm seeking a role in a company where I can apply my knowledge and experience to contribute to the organization's growth. I look forward to working in a challenging environment where I can learn and succeed.
+                </p>
+                <a href="https://drive.google.com/file/d/1n4yGSma4wAdQ22ydqt1veuhBR7Xiih0R/view" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded transition-colors">
+                    Download Resume
+                </a>
             </div>
         </section>
 
-        <hr>
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <h3>Programming Languages</h3>
-            <div class="skills-container">
-                <span class="skill">C Language</span>
-                <span class="skill">C++</span>
-                <span class="skill">Python</span>
-                <span class="skill">JavaScript</span>
-            </div>
-
-            <h3>Tools</h3>
-            <div class="skills-container">
-                <span class="skill">VS Code</span>
-                <span class="skill">Git</span>
-                <span class="skill">GitHub</span>
-                <span class="skill">AWS</span>
-            </div>
-
-            <h3>Frameworks/Tools</h3>
-            <div class="skills-container">
-                <span class="skill">React.js</span>
-                <span class="skill">Bootstrap</span>
-                <span class="skill">Tailwind CSS</span>
-            </div>
-
-            <h3>Web Technologies and Database</h3>
-            <div class="skills-container">
-                <span class="skill">HTML5</span>
-                <span class="skill">CSS3</span>
-                <span class="skill">MySQL</span>
+        <section id="education" class="py-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Education</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Bachelor in Computer Science</h3>
+                    <p class="text-gray-400">CMR Engineering College | 2021 - 2025</p>
+                    <p>Course: CSE (AIML) | CGPA: 7.5</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Intermediate</h3>
+                    <p class="text-gray-400">Gitam Junior College | 2019 - 2021</p>
+                    <p>Board: TSBIE | Academic Percentage: 77%</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Secondary School</h3>
+                    <p class="text-gray-400">Atomic Energy Central School-2 | 2007 - 2019</p>
+                    <p>Board: CBSE | CGPA: 7.3</p>
+                </div>
             </div>
         </section>
 
-        <hr>
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Health Elite</h3>
-                <p>Web-based project for monitoring the health and diet of a person with features like doctor consultation and personalized diet plans.</p>
-                <a href="https://hewebsite2004.github.io/heweb/" class="btn" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Stock Market Prediction Using DASH</h3>
-                <p>Real-time stock market prediction system built using Dash, leveraging machine learning models to forecast stock prices and provide data trends for investors.</p>
+        <section id="skills" class="py-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Programming Languages</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">C Language</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">C++</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Tools</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">VS Code</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Git</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">GitHub</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">AWS</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Frameworks/Tools</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">React.js</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Web Technologies and Database</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">HTML5</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">CSS3</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">MySQL</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <hr>
+        <section id="projects" class="py-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Health Elite</h3>
+                    <p class="mb-4">Web-based project for monitoring the health and diet of a person with features like doctor consultation and personalized diet plans.</p>
+                    <a href="https://hewebsite2004.github.io/heweb/" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded transition-colors">
+                        View Project
+                    </a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Stock Market Prediction Using DASH</h3>
+                    <p>Real-time stock market prediction system built using Dash, leveraging machine learning models to forecast stock prices and provide data trends for investors.</p>
+                </div>
+            </div>
+        </section>
 
-        <section id="achievements" class="section">
-            <h2>Achievements</h2>
-            <ul>
+        <section id="achievements" class="py-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Achievements</h2>
+            <ul class="list-disc list-inside space-y-4 max-w-2xl mx-auto">
                 <li>AI and Cloud Computing Certification from AWS</li>
                 <li>Web Development Internship at Code Clause</li>
                 <li>Certification in Computer Fundamentals and C from IIT Bombay</li>
@@ -112,16 +137,29 @@
             </ul>
         </section>
 
-        <hr>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:saipraneeth.bhattu@gmail.com">saipraneeth.bhattu@gmail.com</a></p>
-            <p>Phone: <a href="tel:9515978725">9515978725</a></p>
-            <p>Location: Hyderabad, India</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScdCTcv9MNAlvjzHYhEmG_ADzsK6odymqX0YPFAJxuZpEeFmg/viewform" class="btn" target="_blank">Get in Touch</a>
+        <section id="contact" class="py-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Contact</h2>
+            <div class="flex flex-col items-center space-y-4">
+                <p>
+                    <span class="font-semibold">Email:</span>
+                    <a href="mailto:saipraneeth.bhattu@gmail.com" class="text-primary hover:underline">saipraneeth.bhattu@gmail.com</a>
+                </p>
+                <p>
+                    <span class="font-semibold">Phone:</span>
+                    <a href="tel:9515978725" class="text-primary hover:underline">9515978725</a>
+                </p>
+                <p>
+                    <span class="font-semibold">Location:</span> Hyderabad, India
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScdCTcv9MNAlvjzHYhEmG_ADzsK6odymqX0YPFAJxuZpEeFmg/viewform" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded transition-colors">
+                    Get in Touch
+                </a>
+            </div>
         </section>
     </main>
-</body>
 
+    <footer class="bg-gray-900 py-8 text-center border-t border-gray-800">
+        <p>&copy; 2023 Bhattu Sai Praneeth. All rights reserved.</p>
+    </footer>
+</body>
 </html>
