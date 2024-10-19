@@ -7,10 +7,3 @@ behavior: 'smooth'
     });
 });
 
-// Button interaction alert
-//document.querySelectorAll('.btn').forEach(button => {
-  //  button.addEventListener('click', function () {
-    //    alert("Redirecting now...");
-    //});
-//});
-
