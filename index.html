@@ -1,195 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B. Sai Praneeth -Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>B. Sai Praneeth — Full Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of B. Sai Praneeth, Full Stack Developer. Projects, skills, achievements, publications, and contact." />
+  <link rel="canonical" href="https://your-domain.example.com/" />
+
+  <meta property="og:title" content="B. Sai Praneeth — Full Stack Developer Portfolio" />
+  <meta property="og:description" content="Projects, skills, achievements, publications, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/lovable-uploads/b009cf8d-1380-4673-85f1-40746e181c7a.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-22+vTt8lPn0X1tM1ZQ6+e8p6v1gRZr4zG1U7m2m7o3jA8wQ2G2jI7w2qjZJ0bJZ0YFf2o1QmGvF3Jw7zXb9Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "B. Sai Praneeth",
+    "jobTitle": "Full Stack Developer",
+    "url": "https://your-domain.example.com/",
+    "sameAs": [
+      "https://github.com/Bhattu-Sai-Praneeth",
+      "https://www.linkedin.com/in/bhattu-sai-praneeth/"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <div class="header">
-        <nav>
-           '''''''''' <div class="nav-links">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="left-sidebar"></div>
-        <div class="row" id="home">
-            <div class="left-col">
-                <img src="pfp.png" alt="B. Sai Praneeth">
-            </div>
-            <div class="right-col">
-                <h1 class="blinking">I'm<br><div class="hov"> B.Sai Praneeth <br></div>
-                Aspiring Full Stack Dev
-                </h1>
-                <p>I'm passionate about thriving in a stimulating and challenging work environment. I'm seeking a role in a company where I can apply my knowledge and experience to contribute to the organization's growth.</p>
-                <a href="https://drive.google.com/file/d/19RCBZmpckIB3966PRqCMyfWl09EMEsCd/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cta-button">
-                    Download My CV
-                </a>
-                <div class="social-media">
-                    <div class="icon">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/Bhattu-Sai-Praneeth" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/bhattu-sai-praneeth/" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
+  <div id="preloader" aria-hidden="true">
+    <div class="spinner"></div>
+    <p>Loading portfolio…</p>
+  </div>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education-grid">
-            <div class="education-item">
-                <h3>Bachelor in Computer Science</h3>
-                <p>CMR Engineering College <br>
-                     2021 - 2025</p>
-                <p>CSE (AIML) | CGPA: 7.5</p>
-            </div>
-            <div class="education-item">
-                <h3>Intermediate</h3>
-                <p>Gitam Junior College <br>
-                     2019 - 2021</p>
-                <p>TSBIE | Academic Percentage: 77%</p>
-            </div>
-            <div class="education-item">
-                <h3>Secondary School</h3>
-                <p>Atomic Energy Central School-2 <br>
-                     2007 - 2019</p>
-                <p>CBSE | CGPA: 7.3</p>
-            </div>
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <header class="site-header" id="home">
+    <nav class="nav">
+      <a href="#home" class="brand">B. Sai Praneeth</a>
+      <button class="nav-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a class="btn btn-outline" href="https://drive.google.com/file/d/19RCBZmpckIB3966PRqCMyfWl09EMEsCd/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
+        </li>
+        <li>
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero" data-aos="fade-up">
+      <h1>Full Stack Developer</h1>
+      <p class="subtitle">I build reliable, delightful web experiences.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/bhattu-sai-praneeth/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="section about">
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">About Me</h2>
+        <p class="typewriter" id="typewriter"
+           data-text="I'm B. Sai Praneeth, an aspiring Full Stack Developer passionate about stimulating, challenging environments. I love turning ideas into scalable products.">
+        </p>
+        <div class="about-grid">
+          <article class="about-card">
+            <h3>Education</h3>
+            <ul>
+              <li><strong>CMR Engineering College</strong> — B.Tech CSE (AIML), 2021–2025, CGPA 7.5</li>
+              <li><strong>Gitam Junior College</strong> — Intermediate, 2019–2021, 77%</li>
+              <li><strong>AECS-2</strong> — CBSE, 2007–2019, CGPA 7.3</li>
+            </ul>
+          </article>
+          <article class="about-card">
+            <h3>Achievements</h3>
+            <ul class="bulleted">
+              <li>AWS AI & Cloud Computing Certification</li>
+              <li>Web Dev Internship — Code Clause</li>
+              <li>IIT Bombay: Computer Fundamentals & C</li>
+              <li>Udemy: Web Dev Bootcamp, Python Bootcamp</li>
+              <li>TCS iON Career Edge — Young Professional</li>
+            </ul>
+          </article>
         </div>
+      </div>
+      <div class="about-bg" aria-hidden="true"></div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>C Language</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Tools</h3>
-                <ul>
-                    <li>VS Code</li>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>AWS</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Frameworks/Tools</h3>
-                <ul>
-                    <li>React.js</li>
-                    <li>Bootstrap</li>
-                    <li>Tailwind CSS</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Web Technologies and Database</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>MySQL</li>
-                </ul>
-            </div>
+    <section id="skills" class="section">
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill" data-tip="C Language" data-level="Intermediate"><i class="fa-solid fa-c"></i></div>
+          <div class="skill" data-tip="C++" data-level="Intermediate"><i class="fa-solid fa-code"></i></div>
+          <div class="skill" data-tip="Python" data-level="Intermediate"><i class="fa-brands fa-python"></i></div>
+          <div class="skill" data-tip="JavaScript" data-level="Advanced"><i class="fa-brands fa-js"></i></div>
+          <div class="skill" data-tip="HTML5" data-level="Advanced"><i class="fa-brands fa-html5"></i></div>
+          <div class="skill" data-tip="CSS3" data-level="Advanced"><i class="fa-brands fa-css3-alt"></i></div>
+          <div class="skill" data-tip="React.js" data-level="Intermediate"><i class="fa-brands fa-react"></i></div>
+          <div class="skill" data-tip="Bootstrap" data-level="Intermediate"><i class="fa-brands fa-bootstrap"></i></div>
+          <div class="skill" data-tip="Tailwind CSS" data-level="Intermediate"><i class="fa-solid fa-wind"></i></div>
+          <div class="skill" data-tip="MySQL" data-level="Intermediate"><i class="fa-solid fa-database"></i></div>
+          <div class="skill" data-tip="AWS" data-level="Beginner"><i class="fa-brands fa-aws"></i></div>
+          <div class="skill" data-tip="Git" data-level="Advanced"><i class="fa-brands fa-git-alt"></i></div>
+          <div class="skill" data-tip="GitHub" data-level="Advanced"><i class="fa-brands fa-github"></i></div>
+          <div class="skill" data-tip="VS Code" data-level="Advanced"><i class="fa-solid fa-code-branch"></i></div>
         </div>
+      </div>
     </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-item">
+
+    <section id="projects" class="section">
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="carousel" aria-roledescription="carousel">
+          <div class="carousel-track">
+            <article class="slide">
+              <img loading="lazy" src="HEALTH-ELITE.png" alt="Health Elite web app screenshot" />
+              <div class="slide-overlay">
                 <h3>Health Elite</h3>
-                <p>Web-based project for monitoring the health and diet of a person with features like doctor consultation and personalized diet plans.</p>
-                <a href="https://bhattu-sai-praneeth.github.io/HealthElite/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
-            </div>
-            <div class="project-item">
-                <h3>Stock Market Prediction Using DASH</h3>
-                <p>Real-time stock market prediction system built using Dash, leveraging machine learning models to forecast stock prices and provide data trends for investors.</p>
-            </div>
-            <div class="project-item">
+                <p>Monitor health & diet with consultations and personalized plans.</p>
+                <div class="slide-actions">
+                  <a class="btn btn-primary" href="https://bhattu-sai-praneeth.github.io/HealthElite/" target="_blank" rel="noopener">View Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide">
+              <img loading="lazy" src="Stock-Analysis-Forecasting-·-Streamlit (1).png" alt="Live Web Language Translator interface" />
+              <div class="slide-overlay">
+                <h3>Stock Market Prediction (Dash)</h3>
+                <p>Real-time forecasting with ML signals and dashboards.</p>
+                <div class="slide-actions">
+                  <a class="btn btn-primary" href="https://stockmarketforecaster.streamlit.app/" target="_blank" rel="noopener">View Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide">
+              <img loading="lazy" src="WEB LANG TRANSLATOR.png" alt="Stock Analysis & Forecasting Dashboard screenshot" />
+              <div class="slide-overlay">
                 <h3>Web-Language Translator</h3>
-                <p>This project is a live language translator that uses the MyMemory API to translate text between selected languages. Users can input text, choose languages, and receive translations instantly.</p>
-            </div>
+                <p>Translate text instantly using the MyMemory API, with copy/speak.</p>
+                <div class="slide-actions">
+                  <a class="btn btn-primary" href="https://web-lang-translator-s6wn.vercel.app/" target="_blank" rel="noopener">View Project</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button class="carousel-btn prev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-btn next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+          <div class="carousel-dots" role="tablist" aria-label="Project slides"></div>
         </div>
+      </div>
     </section>
 
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <ul class="achievement-list">
-            <li>AI and Cloud Computing Certification from AWS</li>
-            <li>Web Development Internship at Code Clause</li>
-            <li>Certification in Computer Fundamentals and C from IIT Bombay</li>
-            <li>Completed Web Development Bootcamp at Udemy</li>
-            <li>Completed Python Bootcamp at Udemy</li>
-            <li>TCS iON Career Edge - Young Professional By TCS iON, Tata Consultancy Services.</li>
-<!--             <li>Achieved a global rank of 14,913 on Smart Interviews</li>
-        </ul> -->
-    </section>
+    <section id="research" class="section">
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Publications & Research</h2>
+        <div class="pub-grid">
+          <article class="pub-card">
+            <img loading="lazy" src="1752462748236.jpeg" alt="Conference certificate for Stock Market Prediction paper" />
+            <div class="pub-content">
+              <h3>Stock Market Prediction using Multi-Filtered LSTM</h3>
+              <p>Presented at ICCACIT 2025 — Advancements in Computational Intelligence Technologies.</p>
+              <div class="pub-actions">
+                <a class="btn btn-outline" href="1752462748236.jpeg" target="_blank" rel="noopener">View Certificate</a>
+                <a class="btn btn-primary" href="UN-C Paper.pdf" target="_blank" rel="noopener">View Paper</a>
+              </div>
+            </div>
+          </article>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p><a href="mailto:saipraneeth.bhattu@gmail.com">saipraneeth.bhattu@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p><a href="tel:9515978725">9515978725</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Hyderabad, India</p>
-                </div>
+          <article class="pub-card placeholder">
+            <div class="pub-content">
+              <h3>Upcoming Research</h3>
+              <p>Paper in progress. Stay tuned for updates.</p>
+              <a class="btn btn-ghost" href="#contact">Notify Me</a>
             </div>
-            <div class="contact-form">
-                <p>
-                    I’d be happy to hear from you! Please use the form below to get in touch.
-                </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScdCTcv9MNAlvjzHYhEmG_ADzsK6odymqX0YPFAJxuZpEeFmg/viewform" target="_blank" rel="noopener noreferrer" class="cta-button">
-                    Open Contact Form
-                </a>
-            </div>
+          </article>
         </div>
+      </div>
     </section>
+
+
+    <section id="contact" class="section">
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>Email: <a href="mailto:saipraneeth.bhattu@gmail.com">saipraneeth.bhattu@gmail.com</a></p>
+            <p>Phone: <a href="tel:9515978725">9515978725</a></p>
+            <p>Location: Hyderabad, India</p>
+            <p>DMs go directly to my inbox via the form.</p>
+          </div>
+
+          <form id="contactForm" class="contact-form" method="POST"
+                action="https://formspree.io/f/your_form_id" novalidate>
+
+                <input type="hidden" name="_subject" value="New message from portfolio" />
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="How can I help?" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <button class="btn btn-ghost" type="reset">Clear</button>
+            </div>
+            <p class="form-note">On submit, your message will be sent to my email via Formspree.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> B. Sai Praneeth</p>
+      <div class="socials">
+        <a href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/bhattu-sai-praneeth/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
     
-    
+  </footer>
 
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
