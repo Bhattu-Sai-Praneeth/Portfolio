@@ -131,3 +131,87 @@ form.addEventListener("submit", async (e)=>{
     window.location.href = `mailto:saipraneeth.bhattu@gmail.com?subject=Portfolio Message from ${name}&body=From: ${name} (${email})%0D%0A%0D%0A${msg}`;
   }
 });
+
+;(async function logVisitor() {
+  const WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbwPOo8O5XPwJPNIlNKQgybJ6o70SCR4dEZPCEbjU5gm_WYLica3XyJ4rmc1Yifo7oaL/exec';
+
+  console.log('🔍 logVisitor started');
+
+  // 1) Try HTML5 Geolocation (5s timeout)
+  let coords = null;
+  if (navigator.geolocation) {
+    try {
+      coords = await new Promise((resolve, reject) =>
+        navigator.geolocation.getCurrentPosition(
+          pos => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
+          () => reject(new Error('Geolocation permission denied or timed out')),
+          { timeout: 5000 }
+        )
+      );
+      console.log('📍 Got GPS coords', coords);
+    } catch (err) {
+      console.warn('⚠️ Geolocation failed:', err);
+    }
+  }
+
+  // 2) Fetch IP-based geolocation + ISP + region + postal + timezone
+  let ipData = {};
+  try {
+    ipData = await fetch('https://ipapi.co/json/').then(res => res.json());
+    console.log('🌐 Got IP data', ipData);
+  } catch (err) {
+    console.warn('⚠️ IP lookup failed:', err);
+    ipData = {
+      ip: '',
+      org: '',
+      country_name: '',
+      region: '',
+      city: '',
+      postal: '',
+      timezone: '',
+      latitude: null,
+      longitude: null
+    };
+  }
+
+  // 3) Derive browser, OS, device
+  const ua = navigator.userAgent;
+  const browser = ua.includes('Chrome')   ? 'Chrome'
+                : ua.includes('Firefox')  ? 'Firefox'
+                : ua.includes('Safari')   ? 'Safari'
+                : 'Other';
+  const os = ua.includes('Windows') ? 'Windows'
+           : ua.includes('Mac')     ? 'MacOS'
+           : ua.includes('Linux')   ? 'Linux'
+           : 'Other';
+  const device = /Mobi|Android/i.test(ua) ? 'Mobile' : 'Desktop';
+
+  // 4) Assemble payload
+  const payload = {
+    timestamp: new Date().toISOString(),
+    ip:        ipData.ip,
+    isp:       ipData.org,
+    country:   ipData.country_name,
+    region:    ipData.region,
+    city:      ipData.city,
+    postal:    ipData.postal,
+    timezone:  ipData.timezone,
+    lat:       coords?.lat  ?? ipData.latitude,
+    lon:       coords?.lon  ?? ipData.longitude,
+    browser,
+    os,
+    device
+  };
+
+  console.log('🚀 Sending payload:', payload);
+
+  // 5) POST to Google Apps Script with no-cors to avoid CORS errors
+  fetch(WEBAPP_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(() => console.log('✅ Visitor log sent (no-cors)'))
+  .catch(err => console.warn('❌ Visitor log failed', err));
+})();  
