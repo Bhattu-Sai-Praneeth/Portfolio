@@ -5,7 +5,7 @@ AOS.init({ duration: 700, offset: 80, once: true });
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.getElementById("preloader").classList.add("hidden");
-  }, 5000); // wait 2 seconds before hiding
+  }, 2000); // wait 2 seconds before hiding
 });
 
 // Year
