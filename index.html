@@ -17,6 +17,9 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v9/font/simple-icons.min.css">
 
   <script type="application/ld+json">
   {
@@ -112,24 +115,53 @@
       <div class="about-bg" aria-hidden="true"></div>
     </section>
 
-    <section id="skills" class="section">
+<section id="skills" class="section">
       <div class="container" data-aos="fade-up">
         <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
-          <div class="skill" data-tip="C Language" data-level="Intermediate"><i class="fa-solid fa-c"></i></div>
-          <div class="skill" data-tip="C++" data-level="Intermediate"><i class="fa-solid fa-code"></i></div>
-          <div class="skill" data-tip="Python" data-level="Intermediate"><i class="fa-brands fa-python"></i></div>
-          <div class="skill" data-tip="JavaScript" data-level="Advanced"><i class="fa-brands fa-js"></i></div>
-          <div class="skill" data-tip="HTML5" data-level="Advanced"><i class="fa-brands fa-html5"></i></div>
-          <div class="skill" data-tip="CSS3" data-level="Advanced"><i class="fa-brands fa-css3-alt"></i></div>
-          <div class="skill" data-tip="React.js" data-level="Intermediate"><i class="fa-brands fa-react"></i></div>
-          <div class="skill" data-tip="Bootstrap" data-level="Intermediate"><i class="fa-brands fa-bootstrap"></i></div>
-          <div class="skill" data-tip="Tailwind CSS" data-level="Intermediate"><i class="fa-solid fa-wind"></i></div>
-          <div class="skill" data-tip="MySQL" data-level="Intermediate"><i class="fa-solid fa-database"></i></div>
-          <div class="skill" data-tip="AWS" data-level="Beginner"><i class="fa-brands fa-aws"></i></div>
-          <div class="skill" data-tip="Git" data-level="Advanced"><i class="fa-brands fa-git-alt"></i></div>
-          <div class="skill" data-tip="GitHub" data-level="Advanced"><i class="fa-brands fa-github"></i></div>
-          <div class="skill" data-tip="VS Code" data-level="Advanced"><i class="fa-solid fa-code-branch"></i></div>
+          <!-- Use brand-correct icons; fallback to Simple Icons via <i class="si si-aws"> etc. -->
+          <div class="skill" data-tip="C Language" data-skill="c">
+            <i class="si si-c" aria-hidden="true"></i>
+          </div>
+          <div class="skill" data-tip="C++" data-skill="cpp">
+            <i class="si si-cplusplus"></i>
+          </div>
+          <div class="skill" data-tip="Python" data-skill="python">
+            <i class="fa-brands fa-python"></i>
+          </div>
+          <div class="skill" data-tip="JavaScript" data-skill="javascript">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <div class="skill" data-tip="HTML5" data-skill="html5">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <div class="skill" data-tip="CSS3" data-skill="css3">
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+          <div class="skill" data-tip="React.js" data-skill="react">
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <div class="skill" data-tip="Bootstrap" data-skill="bootstrap">
+            <i class="fa-brands fa-bootstrap"></i>
+          </div>
+          <div class="skill" data-tip="Tailwind CSS" data-skill="tailwind">
+            <i class="si si-tailwindcss"></i>
+          </div>
+          <div class="skill" data-tip="MySQL" data-skill="mysql">
+            <i class="si si-mysql"></i>
+          </div>
+          <div class="skill" data-tip="AWS" data-skill="aws">
+            <i class="si si-amazonaws"></i>
+          </div>
+          <div class="skill" data-tip="Git" data-skill="git">
+            <i class="fa-brands fa-git-alt"></i>
+          </div>
+          <div class="skill" data-tip="GitHub" data-skill="github">
+            <i class="fa-brands fa-github"></i>
+          </div>
+          <div class="skill" data-tip="VS Code" data-skill="vscode">
+            <i class="si si-visualstudiocode"></i>
+          </div>
         </div>
       </div>
     </section>
