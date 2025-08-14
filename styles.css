@@ -125,12 +125,6 @@ body{
 }
 .skill::before{display:none !important}
 
-.skill-badge{
-  position:absolute;top:8px;right:10px;width:26px;height:26px;border-radius:50%;
-  display:grid;place-items:center;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);
-  box-shadow:none;
-}
-.skill-badge i{font-size:14px;line-height:1}
 
 .skill[data-skill="c"] .skill-badge{border-color:rgba(168,185,204,0.4)}
 .skill[data-skill="c"] .skill-badge i{color:#A8B9CC}
