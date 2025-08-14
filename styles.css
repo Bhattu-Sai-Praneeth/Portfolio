@@ -116,15 +116,29 @@ body{
 }
 .skill{
   background:var(--card);border:1px solid rgba(255,255,255,0.06);border-radius:16px;height:96px;display:grid;place-items:center;
-  font-size:32px;position:relative;color:var(--subtext);cursor:default;transition:transform .15s ease, box-shadow .2s ease, color .2s ease
+  font-size:32px;position:relative;color:var(--subtext);cursor:default;transition:transform .15s ease, box-shadow .2s ease, color .2s ease, border-color .2s ease
 }
-.skill:hover{transform:translateY(-4px);box-shadow:var(--shadow);color:var(--red)}
 .skill::after{
   content:attr(data-tip);
   position:absolute;bottom:8px;left:50%;transform:translateX(-50%);font-size:12px;color:var(--text);opacity:.9
 }
 .skill::before{display:none !important}
 
+/* Per-skill hover colors */
+.skill[data-skill="c"]:hover {color:#A8B9CC; border-color:#A8B9CC;}
+.skill[data-skill="cpp"]:hover {color:#00599C; border-color:#00599C;}
+.skill[data-skill="python"]:hover {color:#3776AB; border-color:#3776AB;}
+.skill[data-skill="javascript"]:hover {color:#F7DF1E; border-color:#F7DF1E;}
+.skill[data-skill="html5"]:hover {color:#E34F26; border-color:#E34F26;}
+.skill[data-skill="css3"]:hover {color:#1572B6; border-color:#1572B6;}
+.skill[data-skill="react"]:hover {color:#61DAFB; border-color:#61DAFB;}
+.skill[data-skill="bootstrap"]:hover {color:#7952B3; border-color:#7952B3;}
+.skill[data-skill="tailwind"]:hover {color:#38BDF8; border-color:#38BDF8;}
+.skill[data-skill="mysql"]:hover {color:#00758F; border-color:#00758F;}
+.skill[data-skill="aws"]:hover {color:#FF9900; border-color:#FF9900;}
+.skill[data-skill="git"]:hover {color:#F05032; border-color:#F05032;}
+.skill[data-skill="github"]:hover {color:#24292F; border-color:#24292F;}
+.skill[data-skill="vscode"]:hover {color:#007ACC; border-color:#007ACC;}
 
 .skill[data-skill="c"] .skill-badge{border-color:rgba(168,185,204,0.4)}
 .skill[data-skill="c"] .skill-badge i{color:#A8B9CC}
