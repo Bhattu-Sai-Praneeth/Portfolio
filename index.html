@@ -4,28 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>B. Sai Praneeth — Full Stack Developer Portfolio</title>
+  <title>My Dev Space</title>
   <meta name="description"
     content="Portfolio of B. Sai Praneeth, Full Stack Developer. Projects, skills, achievements, publications, and contact." />
   <link rel="canonical" href="https://your-domain.example.com/" />
-
   <meta property="og:title" content="B. Sai Praneeth — Full Stack Developer Portfolio" />
   <meta property="og:description" content="Projects, skills, achievements, publications, and contact." />
   <meta property="og:type" content="website" />
-
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-22+vTt8lPn0X1tM1ZQ6+e8p6v1gRZr4zG1U7m2m7o3jA8wQ2G2jI7w2qjZJ0bJZ0YFf2o1QmGvF3Jw7zXb9Vg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v9/font/simple-icons.min.css">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,6 +36,20 @@
 </head>
 
 <body>
+  <!-- Enhanced Cursor Blob -->
+  <div id="cursor-blob"></div>
+  <div id="cursor-blur"></div>
+
+  <!-- Enhanced Background Effects -->
+  <div class="bg-effects">
+    <div class="floating-particles"></div>
+    <div class="gradient-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+  </div>
+
   <div id="preloader" aria-hidden="true">
     <div class="spinner"></div>
     <p>Loading portfolio…</p>
@@ -53,7 +61,7 @@
 
   <header class="site-header" id="home">
     <nav class="nav">
-      <a href="#home" class="brand">B. Sai Praneeth</a>
+      <a href="#home" class="brand">My Dev Space👾</a>
       <button class="nav-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
       <ul class="nav-links">
         <li><a href="#about" class="nav-link">About</a></li>
@@ -73,30 +81,24 @@
         </li>
       </ul>
     </nav>
-
     <section class="hero" data-aos="fade-up">
-      <h1>Full Stack Developer</h1>
-      <p class="subtitle">I build reliable, delightful web experiences.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#projects">View Projects</a>
-
-        <!-- GitHub -->
-        <a class="btn btn-ghost" href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener">
-          <i class="fa-brands fa-github" style="color:#675d5d;"></i> GitHub
-        </a>
-        <!-- LinkedIn -->
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/saipraneethbhattu" target="_blank" rel="noopener">
-          <i class="fa-brands fa-linkedin" style="color:#0A66C2;"></i> LinkedIn
-        </a>
-
-
-
-        </a>
-        <a class="btn btn-ghost"
-          href="https://drive.google.com/file/d/1v28lrCPae6pW-6s_05ZjYco-1yjL8KC-/view?usp=sharing" target="_blank"
-          rel="noopener">
-          <i class="fa-brands fa-View CV"></i> View CV
-        </a>
+      <div class="hero-content">
+        <h1 class="hero-title">B. SAI PRANEETH</h1>
+        <p class="subtitle">AI Enthusiast | Entry-Level Developer | Solution-Oriented Thinker</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/saipraneethbhattu" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a class="btn btn-ghost"
+            href="https://drive.google.com/file/d/1v28lrCPae6pW-6s_05ZjYco-1yjL8KC-/view?usp=sharing" target="_blank"
+            rel="noopener">
+            <i class="fa-solid fa-file-pdf"></i> View CV
+          </a>
+        </div>
       </div>
     </section>
   </header>
@@ -106,24 +108,36 @@
       <div class="container" data-aos="fade-up">
         <h2 class="section-title">About Me</h2>
         <p class="typewriter" id="typewriter"
-          data-text="I'm B. Sai Praneeth, an aspiring Full Stack Developer passionate about stimulating, challenging environments. I love turning ideas into scalable products.">
+          data-text="I’m a technology enthusiast and lifelong internet explorer driven by a deep fascination for how ideas evolve into innovations that shape our world. With an insatiable curiosity, I immerse myself in emerging trends, dissect complex systems, and connect dots across disciplines to uncover new possibilities.">
         </p>
         <div class="about-grid">
-          <article class="about-card">
+          <article class="about-card" data-aos="fade-right" data-aos-delay="100">
+            <div class="card-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
             <h3>Education</h3>
             <ul>
               <li><strong>CMR Engineering College</strong> — B.Tech CSE (AIML), 2021–2025, CGPA 7.5</li>
+              <br>
               <li><strong>Gitam Junior College</strong> — Intermediate, 2019–2021, 77%</li>
+              <br>
               <li><strong>AECS-2</strong> — CBSE, 2007–2019, CGPA 7.3</li>
             </ul>
           </article>
-          <article class="about-card">
+          <article class="about-card" data-aos="fade-left" data-aos-delay="200">
+            <div class="card-icon">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
             <h3>Achievements</h3>
             <ul class="bulleted">
-              <li>AWS AI & Cloud Computing Certification</li>
+              <li>AWS AIML & Cloud Computing Certification</li>
+              <br>
               <li>Web Dev Internship — Code Clause</li>
+              <br>
               <li>IIT Bombay: Computer Fundamentals & C</li>
+              <br>
               <li>Udemy: Web Dev Bootcamp, Python Bootcamp</li>
+              <br>
               <li>TCS iON Career Edge — Young Professional</li>
             </ul>
           </article>
@@ -136,47 +150,46 @@
       <div class="container" data-aos="fade-up">
         <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
-          <!-- Use brand-correct icons; fallback to Simple Icons via <i class="si si-aws"> etc. -->
-          <div class="skill" data-tip="C Language" data-skill="c">
+          <div class="skill" data-tip="C Language" data-skill="c" data-aos="zoom-in" data-aos-delay="50">
             <i class="si si-c" aria-hidden="true"></i>
           </div>
-          <div class="skill" data-tip="C++" data-skill="cpp">
+          <div class="skill" data-tip="C++" data-skill="cpp" data-aos="zoom-in" data-aos-delay="100">
             <i class="si si-cplusplus"></i>
           </div>
-          <div class="skill" data-tip="Python" data-skill="python">
+          <div class="skill" data-tip="Python" data-skill="python" data-aos="zoom-in" data-aos-delay="150">
             <i class="fa-brands fa-python"></i>
           </div>
-          <div class="skill" data-tip="JavaScript" data-skill="javascript">
+          <div class="skill" data-tip="JavaScript" data-skill="javascript" data-aos="zoom-in" data-aos-delay="200">
             <i class="fa-brands fa-js"></i>
           </div>
-          <div class="skill" data-tip="HTML5" data-skill="html5">
+          <div class="skill" data-tip="HTML5" data-skill="html5" data-aos="zoom-in" data-aos-delay="250">
             <i class="fa-brands fa-html5"></i>
           </div>
-          <div class="skill" data-tip="CSS3" data-skill="css3">
+          <div class="skill" data-tip="CSS3" data-skill="css3" data-aos="zoom-in" data-aos-delay="300">
             <i class="fa-brands fa-css3-alt"></i>
           </div>
-          <div class="skill" data-tip="React.js" data-skill="react">
+          <div class="skill" data-tip="React.js" data-skill="react" data-aos="zoom-in" data-aos-delay="350">
             <i class="fa-brands fa-react"></i>
           </div>
-          <div class="skill" data-tip="Bootstrap" data-skill="bootstrap">
+          <div class="skill" data-tip="Bootstrap" data-skill="bootstrap" data-aos="zoom-in" data-aos-delay="400">
             <i class="fa-brands fa-bootstrap"></i>
           </div>
-          <div class="skill" data-tip="Tailwind CSS" data-skill="tailwind">
+          <div class="skill" data-tip="Tailwind CSS" data-skill="tailwind" data-aos="zoom-in" data-aos-delay="450">
             <i class="si si-tailwindcss"></i>
           </div>
-          <div class="skill" data-tip="MySQL" data-skill="mysql">
+          <div class="skill" data-tip="MySQL" data-skill="mysql" data-aos="zoom-in" data-aos-delay="500">
             <i class="si si-mysql"></i>
           </div>
-          <div class="skill" data-tip="AWS" data-skill="aws">
+          <div class="skill" data-tip="AWS" data-skill="aws" data-aos="zoom-in" data-aos-delay="550">
             <i class="si si-amazonaws"></i>
           </div>
-          <div class="skill" data-tip="Git" data-skill="git">
+          <div class="skill" data-tip="Git" data-skill="git" data-aos="zoom-in" data-aos-delay="600">
             <i class="fa-brands fa-git-alt"></i>
           </div>
-          <div class="skill" data-tip="GitHub" data-skill="github">
+          <div class="skill" data-tip="GitHub" data-skill="github" data-aos="zoom-in" data-aos-delay="650">
             <i class="fa-brands fa-github"></i>
           </div>
-          <div class="skill" data-tip="VS Code" data-skill="vscode">
+          <div class="skill" data-tip="VS Code" data-skill="vscode" data-aos="zoom-in" data-aos-delay="700">
             <i class="si si-visualstudiocode"></i>
           </div>
         </div>
@@ -186,7 +199,6 @@
     <section id="projects" class="section">
       <div class="container" data-aos="fade-up">
         <h2 class="section-title">Projects</h2>
-
         <div class="carousel" aria-roledescription="carousel">
           <div class="carousel-track">
             <article class="slide">
@@ -200,10 +212,9 @@
                 </div>
               </div>
             </article>
-
             <article class="slide">
               <img loading="lazy" src="Stock-Analysis-Forecasting-·-Streamlit (1).png"
-                alt="Live Web Language Translator interface" />
+                alt="Stock Market Prediction Dashboard" />
               <div class="slide-overlay">
                 <h3>Stock Market Prediction (Dash)</h3>
                 <p>Real-time forecasting with ML signals and dashboards.</p>
@@ -213,10 +224,8 @@
                 </div>
               </div>
             </article>
-
             <article class="slide">
-              <img loading="lazy" src="WEB LANG TRANSLATOR.png"
-                alt="Stock Analysis & Forecasting Dashboard screenshot" />
+              <img loading="lazy" src="WEB LANG TRANSLATOR.png" alt="Web Language Translator interface" />
               <div class="slide-overlay">
                 <h3>Web-Language Translator</h3>
                 <p>Translate text instantly using the MyMemory API, with copy/speak.</p>
@@ -227,11 +236,9 @@
               </div>
             </article>
           </div>
-
           <button class="carousel-btn prev" aria-label="Previous slide"><i
               class="fa-solid fa-chevron-left"></i></button>
           <button class="carousel-btn next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
-
           <div class="carousel-dots" role="tablist" aria-label="Project slides"></div>
         </div>
       </div>
@@ -241,7 +248,7 @@
       <div class="container" data-aos="fade-up">
         <h2 class="section-title">Publications & Research</h2>
         <div class="pub-grid">
-          <article class="pub-card">
+          <article class="pub-card" data-aos="fade-right">
             <img loading="lazy" src="1752462748236.jpeg"
               alt="Conference certificate for Stock Market Prediction paper" />
             <div class="pub-content">
@@ -253,9 +260,11 @@
               </div>
             </div>
           </article>
-
-          <article class="pub-card placeholder">
+          <article class="pub-card placeholder" data-aos="fade-left">
             <div class="pub-content">
+              <div class="upcoming-icon">
+                <i class="fa-solid fa-clock"></i>
+              </div>
               <h3>Upcoming Research</h3>
               <p>Paper in progress. Stay tuned for updates.</p>
               <a class="btn btn-ghost" href="#contact">Notify Me</a>
@@ -265,21 +274,36 @@
       </div>
     </section>
 
-
     <section id="contact" class="section">
       <div class="container" data-aos="fade-up">
         <h2 class="section-title">Contact</h2>
         <div class="contact-grid">
-          <div class="contact-info">
-            <p>Email: <a href="mailto:saipraneeth.bhattu@gmail.com">saipraneeth.bhattu@gmail.com</a></p>
-            <p>Phone: <a href="tel:9515978725">9515978725</a></p>
-            <p>Location: Hyderabad, India</p>
-            <p>DMs go directly to my inbox via the form.</p>
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span>Email</span>
+                <a href="mailto:saipraneeth.bhattu@gmail.com">saipraneeth.bhattu@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <span>Phone</span>
+                <a href="tel:9515978725">9515978725</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span>Location</span>
+                <span>Hyderabad, India</span>
+              </div>
+            </div>
+            <p class="contact-note">DMs go directly to my inbox via the form.</p>
           </div>
-
           <form id="contactForm" class="contact-form" method="POST" action="https://formspree.io/f/your_form_id"
-            novalidate>
-
+            novalidate data-aos="fade-left">
             <input type="hidden" name="_subject" value="New message from portfolio" />
             <label>
               <span>Name</span>
@@ -294,7 +318,10 @@
               <textarea name="message" rows="5" placeholder="How can I help?" required></textarea>
             </label>
             <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Send Message</button>
+              <button class="btn btn-primary" type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Message
+              </button>
               <button class="btn btn-ghost" type="reset">Clear</button>
             </div>
             <p class="form-note">On submit, your message will be sent to my email via Formspree.</p>
@@ -308,14 +335,18 @@
     <div class="container">
       <p>&copy; <span id="year"></span> B. Sai Praneeth</p>
       <div class="socials">
-        <a href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener" aria-label="GitHub"><i
-            class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/bhattu-sai-praneeth/" target="_blank" rel="noopener"
-          aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/bhattu-sai-praneeth/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
       </div>
     </div>
   </footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
