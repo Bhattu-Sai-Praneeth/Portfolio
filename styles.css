@@ -705,6 +705,7 @@ body {
 .skill[data-skill="tailwind"]:hover { color: #38BDF8; border-color: #38BDF8; }
 .skill[data-skill="mysql"]:hover { color: #00758F; border-color: #00758F; }
 .skill[data-skill="aws"]:hover { color: #FF9900; border-color: #FF9900; }
+.skill[data-skill="linux"]:hover { color: #FCC624; border-color: #FCC624; }
 .skill[data-skill="git"]:hover { color: #F05032; border-color: #F05032; }
 .skill[data-skill="github"]:hover { color: #24292F; border-color: #24292F; }
 .skill[data-skill="vscode"]:hover { color: #007ACC; border-color: #007ACC; }
@@ -1187,3 +1188,4 @@ body {
     box-shadow: none !important;
   }
 }
+
