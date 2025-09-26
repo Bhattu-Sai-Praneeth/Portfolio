@@ -1,4 +1,3 @@
-
 AOS.init({
   duration: 800,
   offset: 80,
@@ -87,7 +86,6 @@ window.addEventListener("load", () => {
   }, 2000);
 });
 
-// Enhanced scroll reveal for elements without AOS
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px'
@@ -102,7 +100,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe elements that need scroll reveal
 document.querySelectorAll('.skill, .about-card, .pub-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
@@ -251,7 +248,6 @@ if (typewriterEl) {
   typewriterObserver.observe(typewriterEl);
 }
 
-// Enhanced Smooth Scrolling with offset for fixed nav
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     const id = this.getAttribute("href");
@@ -261,22 +257,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(id);
 
     if (target) {
-      const offsetTop = target.offsetTop - 80; // Account for fixed nav
+      const offsetTop = target.offsetTop - 80; 
 
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth"
       });
 
-      // Update URL without jumping
       history.pushState(null, "", id);
 
-      // Focus management for accessibility
       target.setAttribute("tabindex", "-1");
       target.focus({ preventScroll: true });
       setTimeout(() => target.removeAttribute("tabindex"), 400);
 
-      // Add highlight effect
       target.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.3)';
       setTimeout(() => {
         target.style.boxShadow = '';
@@ -285,7 +278,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Enhanced Carousel with touch/swipe support and autoplay
 const carousel = {
   track: document.querySelector(".carousel-track"),
   slides: Array.from(document.querySelectorAll(".slide")),
@@ -318,12 +310,10 @@ const carousel = {
   updateCarousel() {
     this.track.style.transform = `translateX(-${this.index * 100}%)`;
 
-    // Update dots
     [...this.dotsContainer.children].forEach((btn, i) => {
       btn.classList.toggle("active", i === this.index);
     });
 
-    // Update slide visibility for screen readers
     this.slides.forEach((slide, i) => {
       slide.setAttribute('aria-hidden', i !== this.index);
     });
@@ -334,7 +324,6 @@ const carousel = {
     this.updateCarousel();
     this.restartAutoplay();
 
-    // Add slide transition effect
     this.track.style.transition = 'transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1)';
   },
 
@@ -342,7 +331,6 @@ const carousel = {
     this.prev.addEventListener("click", () => this.goTo(this.index - 1));
     this.next.addEventListener("click", () => this.goTo(this.index + 1));
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       if (document.activeElement.closest('.carousel')) {
         if (e.key === 'ArrowLeft') this.goTo(this.index - 1);
@@ -350,7 +338,6 @@ const carousel = {
       }
     });
 
-    // Touch/Swipe support
     let startX = 0;
     let isDragging = false;
 
@@ -365,7 +352,6 @@ const carousel = {
       const currentX = e.touches[0].clientX;
       const diff = startX - currentX;
 
-      // Add resistance effect
       const resistance = Math.abs(diff) / window.innerWidth;
       this.track.style.transform = `translateX(calc(-${this.index * 100}% - ${diff * 0.5}px))`;
     }, { passive: true });
@@ -389,7 +375,6 @@ const carousel = {
       this.startAutoplay();
     });
 
-    // Pause on hover
     this.track.addEventListener('mouseenter', () => this.pauseAutoplay());
     this.track.addEventListener('mouseleave', () => this.startAutoplay());
   },
@@ -410,15 +395,12 @@ const carousel = {
   }
 };
 
-// Initialize carousel
 carousel.init();
 
-// Enhanced Form Handling with validation and feedback
 const form = document.getElementById("contactForm");
 if (form) {
   const inputs = form.querySelectorAll('input, textarea');
 
-  // Real-time validation
   inputs.forEach(input => {
     input.addEventListener('blur', validateField);
     input.addEventListener('input', clearErrors);
@@ -443,7 +425,6 @@ if (form) {
       }
     }
 
-
     field.classList.add('success');
     return true;
   }
@@ -451,11 +432,9 @@ if (form) {
   function showFieldError(field, message) {
     field.classList.add('error');
 
-    // Remove existing error message
     const existingError = field.parentNode.querySelector('.error-message');
     if (existingError) existingError.remove();
 
-    // Add new error message
     const errorDiv = document.createElement('div');
     errorDiv.className = 'error-message';
     errorDiv.textContent = message;
@@ -475,11 +454,9 @@ if (form) {
     clearFieldError(this);
   }
 
-  // Enhanced form submission
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Validate all fields
     let isValid = true;
     inputs.forEach(input => {
       if (!validateField({ target: input })) {
@@ -495,7 +472,6 @@ if (form) {
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
 
-    // Show loading state
     submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
     form.classList.add('loading');
@@ -523,7 +499,6 @@ if (form) {
     } catch (err) {
       console.warn('Form submission error:', err);
 
-      // Fallback to mailto
       const name = encodeURIComponent(data.get("name") || "");
       const email = encodeURIComponent(data.get("email") || "");
       const msg = encodeURIComponent(data.get("message") || "");
@@ -673,24 +648,21 @@ if (skillsGrid) {
 
 (async function logVisitor() {
   const WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbwPOo8O5XPwJPNIlNKQgybJ6o70SCR4dEZPCEbjU5gm_WYLica3XyJ4rmc1Yifo7oaL/exec';
-  console.log('🔍 Enhanced logVisitor (accuracy-focused) started');
+  console.log('🔍 Visitor logger (IP-based, no location permission) started');
 
   async function fetchIPData() {
     try {
       const res = await fetch('https://ipapi.co/json/');
       if (!res.ok) throw new Error('IP lookup not ok');
       const j = await res.json();
-      console.log('🌐 IP lookup success', j);
       return {
         ip: j.ip || '',
-        org: j.org || j.org || '',
+        org: j.org || '',
         country_name: j.country_name || '',
         region: j.region || '',
         city: j.city || '',
         postal: j.postal || '',
-        timezone: j.timezone || '',
-        latitude: j.latitude ?? j.lat ?? null,
-        longitude: j.longitude ?? j.lon ?? null
+        timezone: j.timezone || ''
       };
     } catch (err) {
       console.warn('⚠️ IP lookup failed:', err);
@@ -701,183 +673,72 @@ if (skillsGrid) {
         region: '',
         city: '',
         postal: '',
-        timezone: '',
-        latitude: null,
-        longitude: null
+        timezone: ''
       };
     }
   }
 
-  async function getHighAccuracyPosition({
-    desiredAccuracyMeters = 30,
-    maxSamples = 6,
-    maxWaitMS = 15000
-  } = {}) {
-    if (!('geolocation' in navigator)) {
-      throw new Error('Geolocation API not available');
-    }
-
-    let permState = null;
-    try {
-      if (navigator.permissions && navigator.permissions.query) {
-        const p = await navigator.permissions.query({ name: 'geolocation' });
-        permState = p.state;
-        console.log('🔐 Geolocation permission state:', permState);
-      }
-    } catch (e) {
-    }
-
-    return new Promise((resolve, reject) => {
-      const samples = [];
-      let watchId = null;
-      let finished = false;
-
-      function finalize() {
-        if (finished) return;
-        finished = true;
-        if (watchId !== null) navigator.geolocation.clearWatch(watchId);
-        if (samples.length === 0) {
-          reject(new Error('No position samples obtained'));
-          return;
-        }
-        samples.sort((a, b) => (a.coords.accuracy ?? 1e9) - (b.coords.accuracy ?? 1e9));
-        resolve(samples[0]);
-      }
-
-      const overallTimer = setTimeout(() => {
-        console.warn('⏱ getHighAccuracyPosition timed out; returning best sample so far (if any).');
-        finalize();
-      }, maxWaitMS);
-
-      try {
-        watchId = navigator.geolocation.watchPosition(
-          pos => {
-            console.log('📡 sample:', {
-              lat: pos.coords.latitude,
-              lon: pos.coords.longitude,
-              accuracy: pos.coords.accuracy,
-              timestamp: pos.timestamp
-            });
-            samples.push(pos);
-
-            const bestAccuracy = Math.min(...samples.map(s => s.coords.accuracy ?? 1e9));
-            if (bestAccuracy <= desiredAccuracyMeters || samples.length >= maxSamples) {
-              clearTimeout(overallTimer);
-              finalize();
-            }
-          },
-          err => {
-            console.warn('⚠️ watchPosition error:', err);
-            if (err.code === err.PERMISSION_DENIED) {
-              clearTimeout(overallTimer);
-              if (watchId !== null) navigator.geolocation.clearWatch(watchId);
-              reject(err);
-            }
-          },
-          {
-            enableHighAccuracy: true,
-            maximumAge: 0,
-            timeout: maxWaitMS 
-          }
-        );
-      } catch (e) {
-        clearTimeout(overallTimer);
-        reject(e);
-      }
-    });
+  function detectBrowser() {
+    const ua = navigator.userAgent || '';
+    if (ua.includes('Chrome') && !ua.includes('Edge') && !ua.includes('OPR')) return 'Chrome';
+    if (ua.includes('Firefox')) return 'Firefox';
+    if (ua.includes('Safari') && !ua.includes('Chrome')) return 'Safari';
+    if (ua.includes('Edge')) return 'Edge';
+    if (ua.includes('OPR') || ua.includes('Opera')) return 'Opera';
+    return 'Other';
   }
 
-  let coords = null;
-  try {
-    const sample = await getHighAccuracyPosition({
-      desiredAccuracyMeters: 30, 
-      maxSamples: 8,
-      maxWaitMS: 20000 
-    });
+  function detectOS() {
+    const ua = navigator.userAgent || '';
+    if (ua.includes('Windows NT')) return 'Windows';
+    if (ua.includes('Macintosh')) return 'MacOS';
+    if (/Android/i.test(ua)) return 'Android';
+    if (/iPhone|iPad|iPod/i.test(ua)) return 'iOS';
+    if (ua.includes('Linux')) return 'Linux';
+    return 'Other';
+  }
 
-    coords = {
-      lat: sample.coords.latitude,
-      lon: sample.coords.longitude,
-      accuracy: sample.coords.accuracy, 
-      source: 'geolocation'
-    };
-    console.log('📍 Best geolocation sample:', coords);
-  } catch (err) {
-    console.warn('⚠️ High-accuracy geolocation failed or denied:', err);
-    const ipData = await fetchIPData();
-    if (ipData.latitude != null && ipData.longitude != null) {
-      coords = {
-        lat: ipData.latitude,
-        lon: ipData.longitude,
-        accuracy: 5000, 
-        source: 'ip'
-      };
-    } else {
-      coords = { lat: null, lon: null, accuracy: null, source: 'none' };
+  function detectDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
+  }
+
+  function readVisitorName() {
+
+    const elById = document.getElementById('visitor-name');
+    if (elById) {
+
+      if ('value' in elById) return elById.value.trim();
+      return (elById.textContent || '').trim();
     }
+
+    const meta = document.querySelector('meta[name="visitor-name"]');
+    if (meta && meta.content) return meta.content.trim();
+
+    if (typeof window.VISITOR_NAME === 'string') return window.VISITOR_NAME.trim();
+
+    return '';
   }
 
   const ipData = await fetchIPData();
 
-  async function reverseGeocode(lat, lon) {
-    if (lat == null || lon == null) return null;
-    try {
-      const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lon)}`;
-      const res = await fetch(url, { headers: { 'User-Agent': 'MyApp/1.0 (contact@example.com)' } });
-      if (!res.ok) throw new Error('Reverse geocode failed');
-      const data = await res.json();
-      return data.display_name || null;
-    } catch (err) {
-      console.warn('⚠️ Reverse geocode failed:', err);
-      return null;
-    }
-  }
-
-  const humanAddress = await reverseGeocode(coords.lat, coords.lon);
-  if (humanAddress) console.log('🏷 Reverse geocoded address:', humanAddress);
-
   const payload = {
     timestamp: new Date().toISOString(),
-    ip: ipData.ip,
-    isp: ipData.org,
-    country: ipData.country_name,
-    region: ipData.region,
-    city: ipData.city,
-    postal: ipData.postal,
-    timezone: ipData.timezone,
-    lat: coords.lat ?? ipData.latitude,
-    lon: coords.lon ?? ipData.longitude,
-    coordAccuracyMeters: coords.accuracy ?? null,
-    coordSource: coords.source,
-    address: humanAddress ?? null,
-    browser: (function() {
-      const ua = navigator.userAgent;
-      if (ua.includes('Chrome')) return 'Chrome';
-      if (ua.includes('Firefox')) return 'Firefox';
-      if (ua.includes('Safari') && !ua.includes('Chrome')) return 'Safari';
-      if (ua.includes('Edge')) return 'Edge';
-      return 'Other';
-    })(),
-    os: (function() {
-      const ua = navigator.userAgent;
-      if (ua.includes('Windows')) return 'Windows';
-      if (ua.includes('Mac')) return 'MacOS';
-      if (ua.includes('Linux')) return 'Linux';
-      if (/Android/i.test(ua)) return 'Android';
-      if (/iPhone|iPad|iPod/i.test(ua)) return 'iOS';
-      return 'Other';
-    })(),
-    device: /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop',
-    screenResolution: `${screen.width}x${screen.height}`,
-    language: navigator.language,
-    referrer: document.referrer || 'Direct',
-    userAgent: navigator.userAgent
+    isp: ipData.org || '',
+    country: ipData.country_name || '',
+    region: ipData.region || '',
+    city: ipData.city || '',
+    postal: ipData.postal || '',
+    timezone: ipData.timezone || '',
+    browser: detectBrowser(),
+    os: detectOS(),
+    device: detectDevice(),
+    name: readVisitorName()
   };
 
-  console.log('🚀 Sending accurate payload:', payload);
+  console.log('🚀 Sending visitor payload (no geolocation prompt):', payload);
 
-  let retries = 3;
-  while (retries > 0) {
+  let retries = 2;
+  while (retries >= 0) {
     try {
       await fetch(WEBAPP_URL, {
         method: 'POST',
@@ -885,94 +746,13 @@ if (skillsGrid) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-      console.log('✅ Visitor log sent');
+      console.log('✅ Visitor log sent (attempt)', 3 - retries);
       break;
     } catch (err) {
-      console.warn(`❌ Visitor log failed (${retries} retries left)`, err);
+      console.warn('❌ Visitor log failed, retrying...', err);
       retries--;
-      if (retries > 0) await new Promise(r => setTimeout(r, 1000));
+      if (retries >= 0) await new Promise(r => setTimeout(r, 1000));
     }
   }
 
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      try {
-        const perf = performance.getEntriesByType('navigation')[0];
-        console.log('🚀 Page Performance:', {
-          loadTime: perf.loadEventEnd - perf.loadEventStart,
-          domContentLoaded: perf.domContentLoadedEventEnd - perf.domContentLoadedEventStart,
-          totalTime: perf.loadEventEnd - perf.fetchStart
-        });
-      } catch (e) {
-        console.warn('⚠️ Performance data not available:', e);
-      }
-    }, 1000);
-  });
 })();
-
-
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const perfData = performance.getEntriesByType('navigation')[0];
-    console.log('🚀 Page Performance:', {
-      loadTime: perfData.loadEventEnd - perfData.loadEventStart,
-      domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-      totalTime: perfData.loadEventEnd - perfData.fetchStart
-    });
-  }, 1000);
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Tab') {
-    document.body.classList.add('keyboard-navigation');
-  }
-
-  if (e.key === 'Escape') {
-    const openModal = document.querySelector('.modal.open');
-    if (openModal) {
-      openModal.classList.remove('open');
-    }
-
-    if (navLinks.classList.contains('open')) {
-      navLinks.classList.remove('open');
-    }
-  }
-});
-
-document.addEventListener('mousedown', () => {
-  document.body.classList.remove('keyboard-navigation');
-});
-
-const style = document.createElement('style');
-style.textContent = `
-  .keyboard-navigation *:focus {
-    outline: 2px solid var(--red) !important;
-    outline-offset: 2px !important;
-  }
-  
-  .keyboard-navigation button:focus,
-  .keyboard-navigation a:focus {
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3) !important;
-  }
-`;
-document.head.appendChild(style);
-
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('🎉 Enhanced Portfolio JavaScript Loaded');
-
-  setTimeout(() => {
-    document.body.classList.add('loaded');
-  }, 100);
-});
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(registration => {
-        console.log('SW registered: ', registration);
-      })
-      .catch(registrationError => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  });
-}
