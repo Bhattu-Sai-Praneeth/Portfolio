@@ -7,15 +7,19 @@
   </url>
 
   <url>
-    <loc>https://saipraneethbhattu.me/about</loc>
+    <loc>https://saipraneethbhattu.me/#about</loc>
   </url>
 
   <url>
-    <loc>https://saipraneethbhattu.me/projects</loc>
+    <loc>https://saipraneethbhattu.me/#skills</loc>
   </url>
 
   <url>
-    <loc>https://saipraneethbhattu.me/contact</loc>
+    <loc>https://saipraneethbhattu.me/#projects</loc>
+  </url>
+
+  <url>
+    <loc>https://saipraneethbhattu.me/#contact</loc>
   </url>
 
 </urlset>
