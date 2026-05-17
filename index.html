@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sai Praneeth Bhattu | DevOps &amp; Cloud Engineer</title>
+  <meta name="description" content="Portfolio of Sai Praneeth Bhattu - DevOps Engineer & Cloud Practitioner. AWS, Kubernetes, Jenkins, Docker, Terraform and more." />
+  <link rel="canonical" href="https://saipraneethbhattu.me/" />
+  <meta property="og:title"       content="Sai Praneeth Bhattu - DevOps &amp; Cloud Engineer" />
+  <meta property="og:description" content="CI/CD pipelines, cloud-native infrastructure, AWS, Kubernetes, Terraform and more." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://saipraneethbhattu.me/" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Sai Praneeth Bhattu","jobTitle":"DevOps & Cloud Engineer","url":"https://saipraneethbhattu.me/","sameAs":["https://github.com/Bhattu-Sai-Praneeth","https://www.linkedin.com/in/saipraneethbhattu","https://saipraneethbhattu.hashnode.dev/"]}
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+
+  <div id="cursor-glow"></div>
+
+  <div id="preloader" aria-hidden="true">
+    <p class="pre-logo">$ initializing portfolio...</p>
+    <div class="pre-bar"></div>
+  </div>
+
+  <button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav class="nav" id="navbar">
+    <a href="#home" class="brand">
+      <span class="brand-dot"></span>saipraneeth@devops:~$
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"    class="nav-link">about</a></li>
+      <li><a href="#skills"   class="nav-link">skills</a></li>
+      <li><a href="#projects" class="nav-link">projects</a></li>
+      <li><a href="#blog"     class="nav-link">blog</a></li>
+      <li><a href="#research" class="nav-link">research</a></li>
+      <li><a href="#contact"  class="nav-link">contact</a></li>
+      <li>
+        <a class="btn btn-nav"
+           href="https://drive.google.com/file/d/1OiGdPSjotN0F_DysgHq-HBEX2sA_f0vT/view?usp=sharing"
+           target="_blank" rel="noopener">
+          <i class="fa-solid fa-file-lines"></i> Resume
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <header class="hero" id="home">
+    <div class="hero-content" data-aos="fade-up">
+      <p class="hero-eyebrow">whoami - DevOps &amp; Cloud Engineer</p>
+      <h1 class="hero-name">Sai Praneeth<br><span>Bhattu</span></h1>
+      <p class="hero-role"><span id="typedRole"></span><span class="cursor">|</span></p>
+      <p class="hero-desc">
+        Technology enthusiast focused on building resilient CI/CD pipelines, containerized
+        infrastructure, and cloud-native solutions on AWS. Bridging development and operations
+        through automation, security, and observability.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+        <a class="btn btn-outline" href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/saipraneethbhattu" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a class="btn btn-ghost"   href="https://saipraneethbhattu.hashnode.dev/" target="_blank" rel="noopener"><i class="fa-solid fa-rss"></i> Blog</a>
+        <a class="btn btn-ghost"   href="https://drive.google.com/file/d/1OiGdPSjotN0F_DysgHq-HBEX2sA_f0vT/view?usp=sharing" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> View CV</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">20+</div><div class="stat-label">DevOps Tools</div></div>
+        <div class="stat"><div class="stat-num">10+</div><div class="stat-label">AWS Services</div></div>
+        <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Projects</div></div>
+        <div class="stat"><div class="stat-num">1</div><div class="stat-label">Research Paper</div></div>
+      </div>
+    </div>
+
+    <!-- Pipeline Visual -->
+    <div class="hero-pipeline" data-aos="fade-left" data-aos-delay="400">
+      <div class="pipe-stage"><div class="pipe-dot green"></div><div class="pipe-info"><div class="pipe-name">Code &amp; Build</div><div class="pipe-status">Git push → Maven build</div></div><span class="pipe-check"><i class="fa-solid fa-check"></i></span></div>
+      <div class="pipe-stage"><div class="pipe-dot cyan"></div><div class="pipe-info"><div class="pipe-name">Code Quality</div><div class="pipe-status">SonarQube + OWASP</div></div><span class="pipe-check"><i class="fa-solid fa-check"></i></span></div>
+      <div class="pipe-stage"><div class="pipe-dot cyan"></div><div class="pipe-info"><div class="pipe-name">Containerize</div><div class="pipe-status">Docker build + Trivy scan</div></div><span class="pipe-check"><i class="fa-solid fa-check"></i></span></div>
+      <div class="pipe-stage"><div class="pipe-dot orange"></div><div class="pipe-info"><div class="pipe-name">Artifact Registry</div><div class="pipe-status">Nexus Repository</div></div><span class="pipe-check"><i class="fa-solid fa-check"></i></span></div>
+      <div class="pipe-stage"><div class="pipe-dot yellow"></div><div class="pipe-info"><div class="pipe-name">Deploy</div><div class="pipe-status">Kubernetes + ArgoCD</div></div><span class="pipe-check"><i class="fa-solid fa-check"></i></span></div>
+      <div class="pipe-stage"><div class="pipe-dot blue"></div><div class="pipe-info"><div class="pipe-name">Monitor</div><div class="pipe-status">Prometheus + Grafana</div></div><span class="pipe-check"><i class="fa-solid fa-check"></i></span></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="section-label" data-aos="fade-up">about</p>
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <div class="terminal-block" data-aos="fade-up">
+          <div class="term-line"><span class="prompt">$ </span><span class="cmd">cat about.txt</span></div>
+          <div class="term-line">&nbsp;</div>
+          <div class="term-line"><span class="out">Name    :</span> Sai Praneeth Bhattu</div>
+          <div class="term-line"><span class="out">Location:</span> Usa, Michigan</div>
+          <div class="term-line"><span class="out">Focus   :</span> CI/CD Pipelines · Container Orchestration · IaC · Cloud Architecture</div>
+          <div class="term-line">&nbsp;</div>
+          <div class="term-line"><span class="comment"># Passionate about automating everything from code to deployment,</span></div>
+          <div class="term-line"><span class="comment"># securing pipelines with DevSecOps practices, and building</span></div>
+          <div class="term-line"><span class="comment"># scalable cloud-native infrastructure on AWS.</span></div>
+        </div>
+        <div class="about-grid">
+          <article class="about-card" data-aos="fade-right" data-aos-delay="100">
+            <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Education</h3>
+            <ul>
+              <li><strong>University of Michigan</strong> - Masters in CIS, 2026–2028, GPA 4.0</li>
+              <li><strong>CMR Engineering College</strong> - B.Tech CSE (AIML), 2021–2025, CGPA 7.5</li>
+\              <li><strong>AECS-2 CBSE</strong> - SSC, 2007–2019, CGPA 7.3</li>
+            </ul>
+          </article>
+          <article class="about-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>Certifications &amp; Achievements</h3>
+            <ul>
+              <li>AWS AIML &amp; Cloud Computing Certification</li>
+              <li>Web Development Internship - Code Clause</li>
+              <li>IIT Bombay: Computer Fundamentals &amp; C Programming</li>
+              <li>Udemy: Web Dev Bootcamp &amp; Python Bootcamp</li>
+              <li>TCS iON Career Edge - Young Professional</li>
+              <li>Research Paper at ICCACIT 2025</li>
+            </ul>
+          </article>
+          <article class="about-card" data-aos="fade-left" data-aos-delay="300">
+            <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3>Areas of Expertise</h3>
+            <ul>
+              <li>CI/CD Pipeline Design &amp; Implementation</li>
+              <li>Container Orchestration (Docker, Kubernetes)</li>
+              <li>Infrastructure as Code (Terraform, Ansible)</li>
+              <li>AWS Cloud Services &amp; Architecture</li>
+              <li>Monitoring &amp; Observability (Prometheus, Grafana)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SKILLS ═══════════════ -->
+    <section id="skills" class="section skills-section-bg">
+      <div class="container">
+        <p class="section-label" data-aos="fade-up">skills</p>
+        <h2 class="section-title" data-aos="fade-up">Skills &amp; Tools</h2>
+        <div class="skills-section">
+
+          <!-- DevOps & CI/CD -->
+          <div class="skill-group" data-aos="fade-up">
+            <p class="skill-group-title">DevOps &amp; CI/CD Tools</p>
+            <div class="skills-grid">
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux" loading="lazy"/>Linux
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" loading="lazy"/>Git
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo invert-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" loading="lazy"/>GitHub
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg" alt="Maven" loading="lazy"/>Maven
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sonarqube/sonarqube-original.svg" alt="SonarQube" loading="lazy"/>SonarQube
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%23F00020%22%20opacity%3D%22.15%22/%3E%3Cpath%20d%3D%22M40%2012%20L64%2024%20L64%2046%20Q64%2062%2040%2070%20Q16%2062%2016%2046%20L16%2024%20Z%22%20fill%3D%22none%22%20stroke%3D%22%23F00020%22%20stroke-width%3D%224%22/%3E%3Ctext%20x%3D%2240%22%20y%3D%2252%22%20text-anchor%3D%22middle%22%20font-size%3D%2226%22%20font-family%3D%22monospace%22%20font-weight%3D%22bold%22%20fill%3D%22%23F00020%22%3EO%3C/text%3E%3C/svg%3E" alt="OWASP" loading="lazy"/>OWASP
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="Jenkins" loading="lazy"/>Jenkins
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tomcat/tomcat-original.svg" alt="Tomcat" loading="lazy"/>Apache Tomcat
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg" alt="Ansible" loading="lazy"/>Ansible
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%2300c8ff%22%20opacity%3D%22.12%22/%3E%3Crect%20x%3D%2218%22%20y%3D%2238%22%20width%3D%2244%22%20height%3D%2226%22%20rx%3D%223%22%20fill%3D%22none%22%20stroke%3D%22%2300c8ff%22%20stroke-width%3D%223.5%22/%3E%3Cpolyline%20points%3D%2218%2C38%2040%2C24%2062%2C38%22%20fill%3D%22none%22%20stroke%3D%22%2300c8ff%22%20stroke-width%3D%223.5%22%20stroke-linejoin%3D%22round%22/%3E%3Cline%20x1%3D%2240%22%20y1%3D%2224%22%20x2%3D%2240%22%20y2%3D%2264%22%20stroke%3D%22%2300c8ff%22%20stroke-width%3D%222.5%22/%3E%3Cline%20x1%3D%2218%22%20y1%3D%2251%22%20x2%3D%2262%22%20y2%3D%2251%22%20stroke%3D%22%2300c8ff%22%20stroke-width%3D%222%22/%3E%3C/svg%3E" alt="Nexus" loading="lazy" style="filter:brightness(5) saturate(0)"/>Nexus Repository
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" loading="lazy"/>Docker
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%231D63ED%22%20opacity%3D%22.15%22/%3E%3Cpath%20d%3D%22M40%2014%20L62%2024%20L62%2044%20Q62%2060%2040%2068%20Q18%2060%2018%2044%20L18%2024%20Z%22%20fill%3D%22none%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%223.5%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2236%22%20x2%3D%2250%22%20y2%3D%2236%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%222.5%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2243%22%20x2%3D%2250%22%20y2%3D%2243%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%222.5%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2250%22%20x2%3D%2244%22%20y2%3D%2250%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%222.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2250%22%20r%3D%225%22%20fill%3D%22none%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%222.5%22/%3E%3Cline%20x1%3D%2256%22%20y1%3D%2254%22%20x2%3D%2262%22%20y2%3D%2260%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E" alt="Trivy" loading="lazy"/>Trivy
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" loading="lazy"/>Kubernetes
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%23EF7B4D%22%20opacity%3D%22.15%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%2212%22%20fill%3D%22none%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223.5%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%224%22%20fill%3D%22%23EF7B4D%22/%3E%3Cline%20x1%3D%2240%22%20y1%3D%2218%22%20x2%3D%2240%22%20y2%3D%2228%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2240%22%20y1%3D%2252%22%20x2%3D%2240%22%20y2%3D%2262%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2218%22%20y1%3D%2240%22%20x2%3D%2228%22%20y2%3D%2240%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2252%22%20y1%3D%2240%22%20x2%3D%2262%22%20y2%3D%2240%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2225%22%20y1%3D%2225%22%20x2%3D%2232%22%20y2%3D%2232%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2248%22%20y1%3D%2248%22%20x2%3D%2255%22%20y2%3D%2255%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2255%22%20y1%3D%2225%22%20x2%3D%2248%22%20y2%3D%2232%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2232%22%20y1%3D%2248%22%20x2%3D%2225%22%20y2%3D%2255%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E" alt="ArgoCD" loading="lazy"/>ArgoCD
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" alt="Grafana" loading="lazy"/>Grafana
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg" alt="Prometheus" loading="lazy"/>Prometheus
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="Terraform" loading="lazy"/>Terraform
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg" alt="Helm" loading="lazy"/>Helm
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira" loading="lazy"/>Jira
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg" alt="Trello" loading="lazy"/>Trello
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%230078D4%22%20opacity%3D%22.15%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2238%22%20r%3D%2216%22%20fill%3D%22none%22%20stroke%3D%22%230078D4%22%20stroke-width%3D%224%22%20stroke-dasharray%3D%226%2C4%22/%3E%3Crect%20x%3D%2233%22%20y%3D%2238%22%20width%3D%2214%22%20height%3D%2212%22%20rx%3D%223%22%20fill%3D%22%230078D4%22%20opacity%3D%22.8%22/%3E%3Cpath%20d%3D%22M35%2038%20Q35%2030%2040%2030%20Q45%2030%2045%2038%22%20fill%3D%22none%22%20stroke%3D%22%230078D4%22%20stroke-width%3D%223%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2244%22%20r%3D%222%22%20fill%3D%22%23fff%22%20opacity%3D%22.9%22/%3E%3C/svg%3E" alt="DevSecOps" loading="lazy"/>DevSecOps
+              </span>
+            </div>
+          </div>
+
+          <!-- AWS Cloud -->
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="100">
+            <p class="skill-group-title">AWS Cloud Services</p>
+            <div class="skills-grid">
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="27" text-anchor="middle" font-size="11" font-family="monospace" font-weight="bold" fill="#FF9900">EC2</text><rect x="20" y="33" width="40" height="27" rx="4" fill="none" stroke="#FF9900" stroke-width="3"/><rect x="28" y="41" width="10" height="8" rx="2" fill="#FF9900"/><rect x="42" y="41" width="10" height="8" rx="2" fill="#FF9900"/></svg></span>EC2</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="27" text-anchor="middle" font-size="11" font-family="monospace" font-weight="bold" fill="#FF9900">S3</text><circle cx="40" cy="50" r="14" fill="none" stroke="#FF9900" stroke-width="3"/><ellipse cx="40" cy="50" rx="7" ry="14" fill="none" stroke="#FF9900" stroke-width="2"/><line x1="26" y1="50" x2="54" y2="50" stroke="#FF9900" stroke-width="2"/></svg></span>S3</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="27" text-anchor="middle" font-size="13" font-family="monospace" font-weight="bold" fill="#FF9900">&#955;</text><polygon points="40,32 55,57 25,57" fill="none" stroke="#FF9900" stroke-width="3" stroke-linejoin="round"/><line x1="33" y1="46" x2="47" y2="46" stroke="#FF9900" stroke-width="2"/></svg></span>Lambda</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="27" text-anchor="middle" font-size="11" font-family="monospace" font-weight="bold" fill="#FF9900">VPC</text><rect x="16" y="33" width="48" height="30" rx="4" fill="none" stroke="#FF9900" stroke-width="3" stroke-dasharray="5,3"/><rect x="24" y="41" width="13" height="13" rx="3" fill="#FF9900" opacity=".6"/><rect x="43" y="41" width="13" height="13" rx="3" fill="#FF9900" opacity=".6"/></svg></span>VPC</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="27" text-anchor="middle" font-size="11" font-family="monospace" font-weight="bold" fill="#FF9900">IAM</text><circle cx="40" cy="40" r="10" fill="none" stroke="#FF9900" stroke-width="3"/><path d="M22 63 Q40 51 58 63" fill="none" stroke="#FF9900" stroke-width="3" stroke-linecap="round"/></svg></span>IAM</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="27" text-anchor="middle" font-size="11" font-family="monospace" font-weight="bold" fill="#FF9900">ELB</text><line x1="15" y1="50" x2="30" y2="50" stroke="#FF9900" stroke-width="3"/><rect x="30" y="41" width="20" height="18" rx="4" fill="#FF9900" opacity=".7"/><line x1="50" y1="43" x2="65" y2="37" stroke="#FF9900" stroke-width="2.5"/><line x1="50" y1="50" x2="65" y2="50" stroke="#FF9900" stroke-width="2.5"/><line x1="50" y1="57" x2="65" y2="63" stroke="#FF9900" stroke-width="2.5"/></svg></span>ELB</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="26" text-anchor="middle" font-size="9" font-family="monospace" font-weight="bold" fill="#FF9900">CDN</text><circle cx="40" cy="50" r="16" fill="none" stroke="#FF9900" stroke-width="3"/><line x1="24" y1="50" x2="56" y2="50" stroke="#FF9900" stroke-width="2"/><line x1="40" y1="34" x2="40" y2="66" stroke="#FF9900" stroke-width="2"/><path d="M28 42 Q40 36 52 42" fill="none" stroke="#FF9900" stroke-width="2"/><path d="M28 58 Q40 64 52 58" fill="none" stroke="#FF9900" stroke-width="2"/></svg></span>CloudFront</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="26" text-anchor="middle" font-size="9" font-family="monospace" font-weight="bold" fill="#FF9900">DNS</text><circle cx="40" cy="50" r="16" fill="none" stroke="#FF9900" stroke-width="3"/><line x1="24" y1="50" x2="56" y2="50" stroke="#FF9900" stroke-width="2"/><line x1="40" y1="34" x2="40" y2="66" stroke="#FF9900" stroke-width="2"/><line x1="27" y1="44" x2="53" y2="44" stroke="#FF9900" stroke-width="1.5"/><line x1="27" y1="56" x2="53" y2="56" stroke="#FF9900" stroke-width="1.5"/></svg></span>Route 53</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="26" text-anchor="middle" font-size="9" font-family="monospace" font-weight="bold" fill="#FF9900">CW</text><circle cx="40" cy="50" r="16" fill="none" stroke="#FF9900" stroke-width="3"/><polyline points="28,50 33,44 38,54 43,42 48,52 52,50" fill="none" stroke="#FF9900" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>CloudWatch</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="26" text-anchor="middle" font-size="9" font-family="monospace" font-weight="bold" fill="#FF9900">CT</text><rect x="24" y="32" width="32" height="36" rx="3" fill="none" stroke="#FF9900" stroke-width="3"/><line x1="31" y1="42" x2="49" y2="42" stroke="#FF9900" stroke-width="2"/><line x1="31" y1="49" x2="49" y2="49" stroke="#FF9900" stroke-width="2"/><line x1="31" y1="56" x2="42" y2="56" stroke="#FF9900" stroke-width="2"/></svg></span>CloudTrail</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="27" text-anchor="middle" font-size="11" font-family="monospace" font-weight="bold" fill="#FF9900">RDS</text><ellipse cx="40" cy="38" rx="18" ry="7" fill="none" stroke="#FF9900" stroke-width="3"/><line x1="22" y1="38" x2="22" y2="52" stroke="#FF9900" stroke-width="3"/><line x1="58" y1="38" x2="58" y2="52" stroke="#FF9900" stroke-width="3"/><ellipse cx="40" cy="52" rx="18" ry="7" fill="none" stroke="#FF9900" stroke-width="3"/></svg></span>RDS</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="26" text-anchor="middle" font-size="9" font-family="monospace" font-weight="bold" fill="#FF9900">DDB</text><rect x="22" y="33" width="15" height="15" rx="3" fill="#FF9900" opacity=".8"/><rect x="43" y="33" width="15" height="15" rx="3" fill="#FF9900" opacity=".5"/><rect x="22" y="52" width="15" height="15" rx="3" fill="#FF9900" opacity=".5"/><rect x="43" y="52" width="15" height="15" rx="3" fill="#FF9900" opacity=".8"/></svg></span>DynamoDB</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="26" text-anchor="middle" font-size="8.5" font-family="monospace" font-weight="bold" fill="#FF9900">ASG</text><rect x="22" y="34" width="14" height="14" rx="3" fill="#FF9900" opacity=".7"/><rect x="44" y="34" width="14" height="14" rx="3" fill="#FF9900" opacity=".7"/><line x1="18" y1="56" x2="62" y2="56" stroke="#FF9900" stroke-width="2.5"/><polyline points="18,61 13,56 18,51" fill="none" stroke="#FF9900" stroke-width="2.5" stroke-linecap="round"/><polyline points="62,61 67,56 62,51" fill="none" stroke="#FF9900" stroke-width="2.5" stroke-linecap="round"/></svg></span>Auto Scaling</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="26" text-anchor="middle" font-size="8.5" font-family="monospace" font-weight="bold" fill="#FF9900">EB</text><rect x="20" y="32" width="40" height="24" rx="4" fill="none" stroke="#FF9900" stroke-width="3"/><polyline points="30,46 37,52 50,38" fill="none" stroke="#FF9900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="56" r="3" fill="#FF9900"/><line x1="40" y1="59" x2="40" y2="66" stroke="#FF9900" stroke-width="2.5"/><line x1="32" y1="66" x2="48" y2="66" stroke="#FF9900" stroke-width="2.5"/></svg></span>Elastic Beanstalk</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="26" text-anchor="middle" font-size="9" font-family="monospace" font-weight="bold" fill="#FF9900">EC</text><rect x="18" y="34" width="44" height="11" rx="4" fill="none" stroke="#FF9900" stroke-width="2.5"/><rect x="18" y="50" width="44" height="11" rx="4" fill="none" stroke="#FF9900" stroke-width="2.5"/><rect x="24" y="38" width="7" height="3" rx="1" fill="#FF9900"/><rect x="35" y="38" width="7" height="3" rx="1" fill="#FF9900"/><rect x="24" y="54" width="7" height="3" rx="1" fill="#FF9900"/><rect x="35" y="54" width="7" height="3" rx="1" fill="#FF9900"/></svg></span>ElastiCache</span>
+
+              <span class="skill-badge aws"><span class="aws-icon-wrap"><svg class="aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".15"/><text x="40" y="26" text-anchor="middle" font-size="8" font-family="monospace" font-weight="bold" fill="#FF9900">INSP</text><circle cx="38" cy="46" r="13" fill="none" stroke="#FF9900" stroke-width="3"/><line x1="48" y1="56" x2="62" y2="70" stroke="#FF9900" stroke-width="4" stroke-linecap="round"/><line x1="38" y1="40" x2="38" y2="52" stroke="#FF9900" stroke-width="3" stroke-linecap="round"/><circle cx="38" cy="56" r="1.5" fill="#FF9900"/></svg></span>AWS Inspector</span>
+
+            </div>
+          </div>
+
+          <!-- Languages & Frameworks -->
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="200">
+            <p class="skill-group-title">Languages &amp; Frameworks</p>
+            <div class="skills-grid">
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" loading="lazy"/>Python
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy"/>JavaScript
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy"/>C / C++
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" loading="lazy"/>HTML5
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" loading="lazy"/>CSS3
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" loading="lazy"/>React.js
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" loading="lazy"/>Bootstrap
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" loading="lazy"/>Tailwind CSS
+              </span>
+            </div>
+          </div>
+
+          <!-- Databases & PM -->
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="300">
+            <p class="skill-group-title">Databases &amp; Project Management</p>
+            <div class="skills-grid">
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy"/>MySQL
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" loading="lazy"/>MongoDB
+              </span>
+              <span class="skill-badge">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy"/>VS Code
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ PROJECTS ═══════════════ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="section-label" data-aos="fade-up">projects</p>
+        <h2 class="section-title" data-aos="fade-up">Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-header">
+              <div>
+                <div class="project-title">End-to-End CI/CD Pipeline</div>
+                <div class="project-type">DevOps · Security · Automation</div>
+              </div>
+              <div class="project-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">Full DevSecOps pipeline from code commit to production. Jenkins orchestration, SonarQube for code quality, OWASP/Trivy for security scanning, Nexus for artifact management, and ArgoCD for GitOps-based Kubernetes deployment.</p>
+              <div class="project-tags">
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="Jenkins"/>Jenkins</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"/>Docker</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"/>Kubernetes</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sonarqube/sonarqube-original.svg" alt="SonarQube"/>SonarQube</span>
+                <span class="tag"><img class="tag-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%23EF7B4D%22%20opacity%3D%22.15%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%2212%22%20fill%3D%22none%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223.5%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%224%22%20fill%3D%22%23EF7B4D%22/%3E%3Cline%20x1%3D%2240%22%20y1%3D%2218%22%20x2%3D%2240%22%20y2%3D%2228%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2240%22%20y1%3D%2252%22%20x2%3D%2240%22%20y2%3D%2262%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2218%22%20y1%3D%2240%22%20x2%3D%2228%22%20y2%3D%2240%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2252%22%20y1%3D%2240%22%20x2%3D%2262%22%20y2%3D%2240%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2225%22%20y1%3D%2225%22%20x2%3D%2232%22%20y2%3D%2232%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2248%22%20y1%3D%2248%22%20x2%3D%2255%22%20y2%3D%2255%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2255%22%20y1%3D%2225%22%20x2%3D%2248%22%20y2%3D%2232%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2232%22%20y1%3D%2248%22%20x2%3D%2225%22%20y2%3D%2255%22%20stroke%3D%22%23EF7B4D%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E" alt="ArgoCD"/>ArgoCD</span>
+                <span class="tag"><img class="tag-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%231D63ED%22%20opacity%3D%22.15%22/%3E%3Cpath%20d%3D%22M40%2014%20L62%2024%20L62%2044%20Q62%2060%2040%2068%20Q18%2060%2018%2044%20L18%2024%20Z%22%20fill%3D%22none%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%223.5%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2236%22%20x2%3D%2250%22%20y2%3D%2236%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%222.5%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2243%22%20x2%3D%2250%22%20y2%3D%2243%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%222.5%22/%3E%3Cline%20x1%3D%2230%22%20y1%3D%2250%22%20x2%3D%2244%22%20y2%3D%2250%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%222.5%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2250%22%20r%3D%225%22%20fill%3D%22none%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%222.5%22/%3E%3Cline%20x1%3D%2256%22%20y1%3D%2254%22%20x2%3D%2262%22%20y2%3D%2260%22%20stroke%3D%22%231D63ED%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E" alt="Trivy"/>Trivy</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg" alt="Maven"/>Maven</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-outline" href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-header">
+              <div>
+                <div class="project-title">AWS Infrastructure with Terraform</div>
+                <div class="project-type">Cloud · IaC · Automation</div>
+              </div>
+              <div class="project-icon orange-icon"><i class="fa-solid fa-cloud"></i></div>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">Provisioned scalable AWS infrastructure using Terraform - VPC, EC2, Auto Scaling Groups, ELB, RDS, and S3 - configured with Ansible playbooks. Monitored with CloudWatch and Prometheus/Grafana stack.</p>
+              <div class="project-tags">
+                <span class="tag orange-tag"><span class="tag-aws-wrap"><svg class="tag-aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".2"/><text x="40" y="30" text-anchor="middle" font-size="18" font-family="monospace" font-weight="bold" fill="#FF9900">EC2</text><rect x="18" y="38" width="44" height="28" rx="5" fill="none" stroke="#FF9900" stroke-width="7"/><rect x="27" y="48" width="11" height="9" rx="2" fill="#FF9900"/><rect x="42" y="48" width="11" height="9" rx="2" fill="#FF9900"/></svg></span>EC2</span>
+                <span class="tag orange-tag"><span class="tag-aws-wrap"><svg class="tag-aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".2"/><circle cx="40" cy="50" r="17" fill="none" stroke="#FF9900" stroke-width="7"/><ellipse cx="40" cy="50" rx="9" ry="17" fill="none" stroke="#FF9900" stroke-width="5"/><line x1="23" y1="50" x2="57" y2="50" stroke="#FF9900" stroke-width="5"/><text x="40" y="28" text-anchor="middle" font-size="16" font-family="monospace" font-weight="bold" fill="#FF9900">S3</text></svg></span>S3</span>
+                <span class="tag orange-tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="Terraform"/>Terraform</span>
+                <span class="tag orange-tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg" alt="Ansible"/>Ansible</span>
+                <span class="tag orange-tag"><span class="tag-aws-wrap"><svg class="tag-aws-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#FF9900" opacity=".2"/><circle cx="40" cy="48" r="18" fill="none" stroke="#FF9900" stroke-width="7"/><polyline points="28,48 33,40 38,56 43,38 48,50 52,48" fill="none" stroke="#FF9900" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>CloudWatch</span>
+                <span class="tag orange-tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" alt="Grafana"/>Grafana</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-outline" href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-header">
+              <div>
+                <div class="project-title">Containerized Multi-Tier App</div>
+                <div class="project-type">Kubernetes · Helm · Docker</div>
+              </div>
+              <div class="project-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">Multi-tier web application using Docker Compose locally and Kubernetes with Helm charts in production. Includes ingress controllers, horizontal pod autoscaling, persistent volumes, and a full observability stack.</p>
+              <div class="project-tags">
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"/>Kubernetes</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg" alt="Helm"/>Helm</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"/>Docker</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg" alt="Prometheus"/>Prometheus</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" alt="Grafana"/>Grafana</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-outline" href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-header">
+              <div>
+                <div class="project-title">Health Elite</div>
+                <div class="project-type">Full Stack · Web App</div>
+              </div>
+              <div class="project-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">Health monitoring web app for tracking diet, consultations, and personalized health plans. Built with modern frontend technologies and deployed to GitHub Pages.</p>
+              <div class="project-tags">
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"/>HTML5</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"/>CSS3</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS"/>JavaScript</span>
+                <span class="tag"><img class="tag-logo invert-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub Pages"/>GitHub Pages</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-primary" href="https://bhattu-sai-praneeth.github.io/HealthElite/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                <a class="btn btn-ghost"   href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-header">
+              <div>
+                <div class="project-title">Stock Market Prediction</div>
+                <div class="project-type">ML · Python · Streamlit</div>
+              </div>
+              <div class="project-icon orange-icon"><i class="fa-solid fa-chart-line"></i></div>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">Real-time stock forecasting dashboard using Multi-Filtered LSTM. Interactive visualizations, ML-driven signals, and live data feeds. Published as a research paper at ICCACIT 2025.</p>
+              <div class="project-tags">
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"/>Python</span>
+                <span class="tag"><img class="tag-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%23FF4B4B%22%20opacity%3D%22.15%22/%3E%3Cpolygon%20points%3D%2240%2C14%2066%2C56%2014%2C56%22%20fill%3D%22%23FF4B4B%22%20opacity%3D%22.25%22%20stroke%3D%22%23FF4B4B%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22/%3E%3Cpolygon%20points%3D%2240%2C28%2058%2C58%2022%2C58%22%20fill%3D%22%23FF4B4B%22%20opacity%3D%22.5%22%20stroke%3D%22%23FF4B4B%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E" alt="Streamlit"/>Streamlit</span>
+                <span class="tag"><img class="tag-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%23F7931E%22%20opacity%3D%22.15%22/%3E%3Ccircle%20cx%3D%2228%22%20cy%3D%2240%22%20r%3D%2210%22%20fill%3D%22none%22%20stroke%3D%22%23F7931E%22%20stroke-width%3D%223%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2240%22%20r%3D%2210%22%20fill%3D%22none%22%20stroke%3D%22%23F7931E%22%20stroke-width%3D%223%22/%3E%3Cline%20x1%3D%2238%22%20y1%3D%2240%22%20x2%3D%2242%22%20y2%3D%2240%22%20stroke%3D%22%23F7931E%22%20stroke-width%3D%223%22/%3E%3Cpolyline%20points%3D%2218%2C55%2028%2C30%2040%2C55%2052%2C30%2062%2C55%22%20fill%3D%22none%22%20stroke%3D%22%23F7931E%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E" alt="ML"/>ML / LSTM</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-primary" href="https://stockmarketforecaster.streamlit.app/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                <a class="btn btn-ghost"   href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-header">
+              <div>
+                <div class="project-title">Web Language Translator</div>
+                <div class="project-type">API Integration · JavaScript</div>
+              </div>
+              <div class="project-icon"><i class="fa-solid fa-language"></i></div>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">Instant multilingual text translator powered by the MyMemory API with copy-to-clipboard and text-to-speech features. Clean responsive UI deployed on Vercel.</p>
+              <div class="project-tags">
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/>JavaScript</span>
+                <span class="tag"><img class="tag-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%23ffffff%22%20opacity%3D%22.08%22/%3E%3Cpolygon%20points%3D%2240%2C20%2066%2C60%2014%2C60%22%20fill%3D%22%23ffffff%22/%3E%3C/svg%3E" alt="Vercel"/>Vercel</span>
+                <span class="tag"><img class="tag-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"/>CSS3</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-primary" href="https://web-lang-translator-s6wn.vercel.app/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                <a class="btn btn-ghost"   href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ BLOG ═══════════════ -->
+    <section id="blog" class="section" style="padding-top:0">
+      <div class="container">
+        <p class="section-label" data-aos="fade-up">blog</p>
+        <h2 class="section-title" data-aos="fade-up">Blog</h2>
+        <div class="blog-strip" data-aos="fade-up">
+          <div class="blog-strip-left">
+            <div class="blog-icon">
+              <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%232962FF%22%20opacity%3D%22.15%22/%3E%3Cpolygon%20points%3D%2240%2C14%2060%2C26%2060%2C54%2040%2C66%2020%2C54%2020%2C26%22%20fill%3D%22none%22%20stroke%3D%22%232962FF%22%20stroke-width%3D%224%22/%3E%3Ctext%20x%3D%2240%22%20y%3D%2250%22%20text-anchor%3D%22middle%22%20font-size%3D%2228%22%20font-family%3D%22monospace%22%20font-weight%3D%22bold%22%20fill%3D%22%232962FF%22%3E%23%3C/text%3E%3C/svg%3E" alt="Hashnode" style="width:28px;height:28px"/>
+            </div>
+            <div>
+              <div class="blog-title">hashnode.dev/saipraneethbhattu</div>
+              <div class="blog-sub">DevOps walkthroughs, cloud architecture notes, CI/CD tutorials and hands-on AWS guides</div>
+            </div>
+          </div>
+          <a class="btn btn-outline" href="https://saipraneethbhattu.hashnode.dev/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Read Blog
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ RESEARCH ═══════════════ -->
+    <section id="research" class="section" style="padding-top:20px">
+      <div class="container">
+        <p class="section-label" data-aos="fade-up">research</p>
+        <h2 class="section-title" data-aos="fade-up">Publications</h2>
+        <div class="pub-grid">
+          <article class="pub-card" data-aos="fade-right">
+            <img class="pub-img" loading="lazy" src="1752462748236.jpeg" alt="Conference certificate"/>
+            <div class="pub-content">
+              <div class="pub-badge"><i class="fa-solid fa-file-lines"></i></div>
+              <div class="pub-meta">ICCACIT 2025 - Advancements in Computational Intelligence Technologies</div>
+              <h3 class="pub-title">Stock Market Prediction using Multi-Filtered LSTM Approach</h3>
+              <p class="pub-desc">Proposes a multi-filtered LSTM model combining technical indicators with deep learning for more accurate and noise-resilient stock market predictions.</p>
+              <div class="pub-links">
+                <a class="btn btn-primary" href="UN-C Paper.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> View Paper</a>
+                <a class="btn btn-outline" href="1752462748236.jpeg" target="_blank"><i class="fa-solid fa-certificate"></i> Certificate</a>
+              </div>
+            </div>
+          </article>
+          <article class="pub-card placeholder" data-aos="fade-left">
+            <div class="pub-content pub-content-center">
+              <div class="upcoming-icon"><i class="fa-solid fa-clock"></i></div>
+              <h3 class="pub-title">Upcoming Research</h3>
+              <p class="pub-desc">Paper in progress. Stay tuned for updates.</p>
+              <a class="btn btn-ghost" href="#contact">Notify Me</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <p class="section-label" data-aos="fade-up">contact</p>
+        <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item" data-aos="fade-right">
+              <i class="fa-solid fa-envelope"></i>
+              <div><span>Email</span><a href="mailto:saipraneeth.bhattu@gmail.com">saipraneeth.bhattu@gmail.com</a></div>
+            </div>
+            <div class="contact-item" data-aos="fade-right" data-aos-delay="100">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
+              <i class="fa-solid fa-location-dot"></i>
+              <div><span>Location</span><p>Usa, Michigan</p></div>
+            </div>
+            <div class="contact-socials" data-aos="fade-right" data-aos-delay="300">
+              <a class="social-btn" href="https://github.com/Bhattu-Sai-Praneeth" target="_blank" rel="noopener">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" class="social-logo invert-logo"/> GitHub
+              </a>
+              <a class="social-btn" href="https://www.linkedin.com/in/saipraneethbhattu" target="_blank" rel="noopener">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="social-logo"/> LinkedIn
+              </a>
+              <a class="social-btn" href="https://saipraneethbhattu.hashnode.dev/" target="_blank" rel="noopener">
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%228%22%20fill%3D%22%232962FF%22%20opacity%3D%22.15%22/%3E%3Cpolygon%20points%3D%2240%2C14%2060%2C26%2060%2C54%2040%2C66%2020%2C54%2020%2C26%22%20fill%3D%22none%22%20stroke%3D%22%232962FF%22%20stroke-width%3D%224%22/%3E%3Ctext%20x%3D%2240%22%20y%3D%2250%22%20text-anchor%3D%22middle%22%20font-size%3D%2228%22%20font-family%3D%22monospace%22%20font-weight%3D%22bold%22%20fill%3D%22%232962FF%22%3E%23%3C/text%3E%3C/svg%3E" alt="Hashnode" class="social-logo"/> Blog
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" data-aos="fade-left" novalidate>
+            <label><span>// NAME</span><input type="text" name="name" placeholder="Your name" required/></label>
+            <label><span>// EMAIL</span><input type="email" name="email" placeholder="you@example.com" required/></label>
+            <label><span>// MESSAGE</span><textarea name="message" rows="5" placeholder="How can I help?" required></textarea></label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+              <button class="btn btn-ghost" type="reset">Clear</button>
+            </div>
+            <p class="form-note">Your message will be sent directly to my inbox.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-socials">
+        <a href="https://github.com/Bhattu-Sai-Praneeth"         target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/saipraneethbhattu/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://saipraneethbhattu.hashnode.dev/"         target="_blank" rel="noopener" aria-label="Blog"><i class="fa-solid fa-rss"></i></a>
+        <a href="mailto:saipraneeth.bhattu@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
